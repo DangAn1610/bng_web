@@ -1,0 +1,303 @@
+@charset "utf-8";
+/* CSS Document */
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap');
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+body 
+{
+	font-family: "Kanit", sans-serif;
+	font-size: 16px;
+	color: #7f7f7f;
+	margin: 0
+}
+h1{
+	padding: 50px;
+	text-align: center;
+	font-size: 55px;
+	font-family: "Quicksand", serif;
+	color: #000000
+}
+h2,h3,h4
+{
+	 font-family: "Quicksand", serif;
+	color: #000000
+}
+.price
+{ text-align: center;
+	color: crimson
+}
+.end{ padding: 20px;
+	
+}
+.tab {
+  float: left;
+  text-align:center;
+  background-color: #f1f1f1;
+  width: 30%;
+  height: 300px;
+}
+.tag
+{text-align: center}
+.icon
+{
+	margin: auto
+}
+.youtube
+{margin-left: 130px}
+
+
+
+
+
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  float: left;
+  padding: 0px 12px;
+  border: 1px solid #ccc;
+  width: 70%;
+  border-left: none;
+  height: 300px;
+  display: none;
+}
+
+
+
+
+*{ box-sizing: border-box}
+
+.row
+{
+	display: flex; /* day cac box ben trong row len canh nhau*/
+	flex-wrap: wrap /*-- khi du 100%, se day box ke theo xuong hang*/
+}
+.container{	width: 100%	}
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+[class*="col-"] {
+
+  padding: 0px;
+  /*border: 1px solid red;*/
+}
+
+
+/* vung code cho tablet*/
+@media (min-width:768px){
+	.container{	
+		width: 100%;
+		margin: auto/* de box container nam giua man hinh*/
+	}
+	.col-md-1 {width: 8.33%;}
+.col-md-2 {width: 16.66%;}
+.col-md-3 {width: 25%;}
+.col-md-4 {width: 33.33%;}
+.col-md-5 {width: 41.66%;}
+.col-md-6 {width: 50%;}
+.col-md-7 {width: 58.33%;}
+.col-md-8 {width: 66.66%;}
+.col-md-9 {width: 75%;}
+.col-md-10 {width: 83.33%;}
+.col-md-11 {width: 91.66%;}
+.col-md-12 {width: 100%;}
+	
+}
+/*code cho desktop tu 1024 tro di*/
+@media (min-width:992px){
+	.container{	
+		width: 90%;
+		margin: auto/* de box container nam giua man hinh*/
+	}
+	.col-lg-1 {width: 8.33%;}
+.col-lg-2 {width: 16.66%;}
+.col-lg-3 {width: 25%;}
+.col-lg-4 {width: 33.33%;}
+.col-lg-5 {width: 41.66%;}
+.col-lg-6 {width: 50%;}
+.col-lg-7 {width: 58.33%;}
+.col-lg-8 {width: 66.66%;}
+.col-lg-9 {width: 75%;}
+.col-lg-10 {width: 83.33%;}
+.col-lg-11 {width: 91.66%;}
+.col-lg-12 {width: 100%;}
+}
+nav .container
+{
+	position: relative;
+	
+}
+#btn-toggle
+{
+	position: absolute;
+	right:0; top: 10px;
+	background: none;
+	border: none;
+	cursor:pointer;
+	color: tomato;
+	display: block
+	}
+nav .menu ul
+{ 
+	margin: 0;
+	padding: 0;
+	list-style: none
+}
+nav .menu ul li
+{
+	border-bottom: 1px dotted #666
+}
+nav .menu ul li a
+{
+	color: #333; 
+	text-decoration:none;
+	padding:10px 16px ;	
+	display: block
+}
+nav .menu ul li a:hover{
+	background: rgba(178,209,248,1.00)
+}
+nav .icon-menu a
+{
+	padding: 10px; 
+	display: inline-block;
+	text-decoration: none; color: #666
+}
+nav .icon-menu a:hover
+{
+	background: rgba(178,209,248,1.00);
+	border-radius: 5px 20px;
+	color: white
+}
+/*nav .menu, nav .icon-menu{ display: none}*/
+
+@media (min-width:992px)
+{
+	#btn-toggle{ display: none}
+	nav .menu, nav .icon-menu{ display: block !important}
+	nav .container, nav .menu ul{
+		display: flex;
+		justify-content: space-between;
+		align-items: center}
+	nav .menu ul li
+	{
+	border-bottom:none;
+	position: relative
+	}
+}
+
+/*-- style cho dropdown menu----*/
+nav .menu .dropdown-menu
+{
+	background: #eee; 
+	display: none
+}
+@media (min-width:992px)
+{
+		nav .menu .dropdown-menu
+	{
+		position: absolute; 
+		left: 0; 
+		top: 250%;
+		flex-direction: column;
+		width: 200px;		
+		border-top: rgba(22,80,190,1.00) 2px solid;
+		transition: all .5s;
+		visibility: hidden;
+		opacity: 0
+		}
+
+nav .menu ul li:hover >.dropdown-menu
+{
+	top:100%;
+	visibility: visible;
+	opacity: 1
+}
+}
+.banner
+{ 
+	width: 100%;
+	max-height: 600px;
+	background-color: #EFEFEF
+}
+.img-100 
+{ 
+	width: 100%; 
+	height: auto
+}
+.banner .row, .cover .row{
+	align-items:center; 
+	justify-content: space-between
+}
+.text-primary{ color: green}
+.text-light{ color: #fff}
+.flex-nguoc-ngang{
+	flex-direction: row-reverse
+}
+.nav2{ 
+	width: 80%; 
+	background-color: rgba(255,255,255,1);
+	border-radius: 60px; 
+	padding: 10px
+}
+.fixed-top{ position: fixed; left: 10%; top: 15px; z-index: 99999}
+.cover{ position: relative}
+.cover .container
+{
+	width: 80%; margin: auto;
+	position: absolute;
+	top: 20%;
+	left: 10%
+}
+.btn-outline-primary
+{
+	border: 2px solid #AC4ECB;
+	background-color: transparent;
+	padding: 10px 20px;
+	border-radius: 50px;
+	color: #fff;
+	cursor: pointer
+}
+.btn-outline-primary:hover
+{
+	background-color: #AC4ECB;
+}
+.btn-primary
+{
+	border: none;
+	background-color: #AC4ECB;
+	border: 2px solid #AC4ECB;
+	padding: 10px 20px;
+	border-radius: 50px;
+	color: #fff;
+	cursor: pointer
+}
+.btn-primary:hover{
+	background-color: #fff;color: #AC4ECB;
+	border: 2px solid #fff;
+}
